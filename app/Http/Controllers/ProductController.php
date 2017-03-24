@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use App\Product;
 use AWS;
 use DB;
-use Request;
+//use Request;
 use Input;
 use Alert;
 use Cart;
@@ -58,23 +58,23 @@ class ProductController extends Controller
             'image' => 'required|file',
             ]);
 
-        //$product = new Product($request->all());
+        $product = new Product($request->all());
 
 
         //store image in amazon bucket
-        // $file = $request->file('image') ;
-        // $fileName =  time() . '.' . $file->getClientOriginalExtension() ;
-        // $filePath = $file->getPathName();
+        $file = $request->file('image') ;
+        $fileName =  time() . '.' . $file->getClientOriginalExtension() ;
+        $filePath = $file->getPathName();
 
-        // $s3 = AWS::createClient('s3');
-        // $s3->putObject(array(
-        //     'Bucket'     => 'kumashe',
-        //     'Key'        => $fileName,
-        //     'SourceFile' => $filePath,
-        //     'ACL'        => 'public-read'
-        // ));
-        //  $image_url = $s3->getObjectUrl('kumashe', $fileName);
-        // $product->image_url = $image_url;
+        $s3 = AWS::createClient('s3');
+        $s3->putObject(array(
+            'Bucket'     => 'kumashe',
+            'Key'        => $fileName,
+            'SourceFile' => $filePath,
+            'ACL'        => 'public-read'
+        ));
+         $image_url = $s3->getObjectUrl('kumashe', $fileName);
+        $product->image_url = $image_url;
         $product->save();
 
         return redirect(route('product.index'));
