@@ -25,6 +25,7 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->       
       <!-- Scripts -->
+      <script src="js/jquery.js"></script>
       <script src= "{{asset('js/sweetalert.min.js')}}"></script>
       <script src="{{asset('js/jquery.js')}}"></script>
     @include('sweet::alert')
@@ -38,6 +39,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('images/ico/apple-touch-icon-114-precomposed.png')}}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('images/ico/apple-touch-icon-72-precomposed.png')}}">
     <link rel="apple-touch-icon-precomposed" href="{{asset('images/ico/apple-touch-icon-57-precomposed.png')}}">
+
+
 </head><!--/head-->
 
 <body>
