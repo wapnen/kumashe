@@ -6,17 +6,13 @@ use Illuminate\Http\Request;
 use App\Product;
 use AWS;
 use DB;
-//use Request;
 use Input;
 use Alert;
 use Cart;
 
 class ProductController extends Controller
 {   
-     public function __construct()
-    {
-      //  $this->middleware('auth', ['except' => ['show', 'add_to_cart', 'edit_cart', 'remove_cart_item']] );
-    }
+   
     /**
      * Display a listing of the resource.
      *
@@ -50,7 +46,6 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        //dd($request->all());
         $this->validate($request, [
             'name' => 'required',
             'price' => 'required|integer',
