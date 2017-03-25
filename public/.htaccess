@@ -17,4 +17,8 @@
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    php_flag xcache.cacher Off
+    php_flag xcache.size 0
+    php_flag xcache.stat Off
 </IfModule>

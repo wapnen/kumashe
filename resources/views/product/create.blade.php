@@ -4,7 +4,7 @@
         <div class="container">
         <div class="row">
                 <div class="col-sm-8 col-sm-offset-1">
-                    <div class="login-form"><!--login form-->
+                    <div class="login-form">
                         <div class="step-one">
                     <h2 class="heading">Add Product</h2>
                             </div>
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                     </form>
-                    </div><!--/login form-->
+                    </div>
                 </div>
               
             </div>

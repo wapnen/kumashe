@@ -6,7 +6,7 @@
 				<div class="col-sm-3">
 				<div class="left-sidebar">
                         <h2>Category</h2>
-                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                        <div class="panel-group category-products" id="accordian">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
@@ -99,19 +99,19 @@
                                     <li><a href="#"> <span class="pull-right">(32)</span>Tara</a></li>
                                 </ul>
                             </div>
-                        </div><!--/brands_products-->
+                        </div>
                         
                         
                         
-                        <div class="shipping text-center"><!--shipping-->
+                        <div class="shipping text-center">
                             <img src="images/home/shipping.jpg" alt="" />
-                        </div><!--/shipping-->
+                        </div>
                     
                     </div>
 				</div>
 				
 				<div class="col-sm-9 padding-right">
-					<div class="product-details"><!--product-details-->
+					<div class="product-details">
 						<div class="col-sm-5">
 							<div class="view-product">
 								<img src="{{$product->image_url}}" alt="" />
@@ -121,7 +121,7 @@
 
 						</div>
 						<div class="col-sm-7">
-							<div class="product-information"><!--/product-information-->
+							<div class="product-information">
 								<img src="{{URL::asset('images/product-details/new.jpg')}}" class="newarrival" alt="" />
 								<h2>{{$product->name}}</h2>
 								<p>Web ID: {{$product->id}}</p>
@@ -144,12 +144,11 @@
 								<p><b>Condition:</b> New</p>
 								<p><b>Brand:</b> {{$product->brand}}</p>
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
-							</div><!--/product-information-->
+							</div>
 						</div>
-					</div><!--/product-details-->
+					</div>
 					
-					<div class="category-tab shop-details-tab"><!--category-tab-->
-						<div class="col-sm-12">
+					<div class="category-tab shop-details-tab">						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
 								<li><a href="#details" class="active" data-toggle="tab">Description</a></li>
 								
@@ -239,7 +238,7 @@
 								<i class="fa fa-angle-right"></i>
 							  </a>			
 						</div>
-					</div><!--/recommended_items-->
+					</div>
 					
 				</div>
 			</div>
