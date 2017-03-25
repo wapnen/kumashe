@@ -39,8 +39,8 @@ return [
 
         'awss3' => [
             'driver'          => 'awss3',
-            'key'             => 'your-key',
-            'secret'          => 'your-secret',
+            'key'    => env('AWS_ACCESS_KEY_ID', 'AKIAIQ4F7SYH4A2QBTUA'),
+            'secret' => env('AWS_SECRET_KEY', '9MTD7pt384JWIgnnrYKdeiCrTuBjbbA14efcjkj6'),
             'bucket'          => 'your-bucket',
             'region'          => 'your-region',
             'version'         => 'latest',
