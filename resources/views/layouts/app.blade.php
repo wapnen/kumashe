@@ -11,7 +11,7 @@
 
     <title>Kumashe</title>
     <!-- Styles -->
-    <link href="css/app.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css')}}" rel="stylesheet">
     <link href="css/sweetalert.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
