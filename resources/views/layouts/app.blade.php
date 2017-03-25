@@ -11,7 +11,7 @@
 
     <title>Kumashe</title>
     <!-- Styles -->
-    <link href="{{ asset('css/app.css')}}" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
     <link href="/css/sweetalert.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -21,16 +21,15 @@
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/responsive.css" rel="stylesheet">
   
-      <script src="js/jquery.js"></script>
-      <script src= "{{asset('js/sweetalert.min.js')}}"></script>
-      <script src="{{asset('js/jquery.js')}}"></script>
+      <script src="/js/jquery.js"></script>
+      <script src= "/js/sweetalert.min.js"></script>
     @include('sweet::alert')
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    <link rel="shortcut icon" href="{{asset('images/ico/favicon.ico')}}">
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/apple-touch-icon-72-precomposed.png">
@@ -72,7 +71,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="{{url('/')}}"><img src="{{asset('images/home/logo.png')}}" alt="" /></a>
+                            <a href="{{url('/')}}"><img src="/images/home/logo.png" alt="" /></a>
                         </div>
                         
                     </div>
@@ -166,7 +165,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{asset('images/home/1.png')}}" alt="" />
+                                        <img src="/images/home/1.png" alt="" />
                                     </div>
                                    
                             </div>
@@ -176,7 +175,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{asset('images/home/2.png')}}" alt="" />
+                                        <img src="/images/home/2.png" alt="" />
                                     </div>
                                     
                             </div>
@@ -186,7 +185,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{asset('images/home/3.png')}}" alt="" />
+                                        <img src="/images/home/3.png" alt="" />
                                     </div>
                                     
                             </div>
@@ -196,7 +195,7 @@
                             <div class="video-gallery text-center">
                                 <a href="#">
                                     <div class="iframe-img">
-                                        <img src="{{asset('images/home/4.png')}}" alt="" />
+                                        <img src="images/home/4.png" alt="" />
                                     </div>
                                    
                                 </a>
@@ -205,7 +204,7 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="address">
-                            <img src="{{asset('images/home/map.png')}}" alt="" />
+                            <img src="/images/home/map.png" alt="" />
                             <p>Shop 30, Glory Plaza, Zarmaganda-Rayfield Road, Jos</p>
                         </div>
                     </div>
