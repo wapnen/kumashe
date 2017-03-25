@@ -56,7 +56,6 @@ class ProductController extends Controller
         $product = new Product($request->all());
 
 
-        store image in amazon bucket
         $file = $request->file('image') ;
         $fileName =  time() . '.' . $file->getClientOriginalExtension() ;
         $filePath = $file->getPathName();
