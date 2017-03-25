@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')       
-        <section id="slider"><!--slider-->
+        <section id="slider">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -76,14 +76,14 @@
                 </div>
             </div>
         </div>
-    </section><!--/slider-->
+    </section>
 
         <div class="container">
             <div class="row">
            <div class="col-sm-3">
                     <div class="left-sidebar">
                         <h2>Category</h2>
-                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                        <div class="panel-group category-products" id="accordian">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
@@ -164,9 +164,9 @@
                                 </div>
                             </div>
                             
-                        </div><!--/category-products-->
+                        </div>
                     
-                        <div class="brands_products"><!--brands_products-->
+                        <div class="brands_products">
                             <h2>Brands</h2>
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
@@ -176,13 +176,13 @@
                                     <li><a href="#"> <span class="pull-right">(32)</span>Tara</a></li>
                                 </ul>
                             </div>
-                        </div><!--/brands_products-->
+                        </div>
                         
                         
                         
-                        <div class="shipping text-center"><!--shipping-->
+                        <div class="shipping text-center">
                             <img src="images/home/shipping.jpg" alt="" />
-                        </div><!--/shipping-->
+                        </div>
                     
                     </div>
                 </div>
@@ -342,9 +342,9 @@
                             </div>
                         </div>
                         
-                    </div><!--features_items-->
+                    </div>
                     
-                    <div class="category-tab"><!--category-tab-->
+                    <div class="category-tab">
                         <div class="col-sm-12">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
@@ -727,7 +727,7 @@
                                 <i class="fa fa-angle-right"></i>
                               </a>          
                         </div>
-                    </div><!--/recommended_items-->
+                    </div>
                     
                 </div>
 

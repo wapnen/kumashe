@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<section    ><!--form-->
+<section>
         <div class="container">
         <div class="breadcrumbs">
                 <ol class="breadcrumb">
                   <li><a href="{{url('\login')}}">Register</a></li>
                   <li class="active">Billing Address</li>
                 </ol>
-            </div><!--/breadcrums-->
+            </div>
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-1">
-                    <div class="login-form"><!--login form-->
+                    <div class="login-form">
                         <div class="step-one">
                     <h2 class="heading">Billing Address</h2>
                 </div>
@@ -85,11 +85,11 @@
                             </div>
                         </div>
                     </form>
-                    </div><!--/login form-->
+                    </div>
                 </div>
               
             </div>
         </div>
-    </section><!--/form-->
+    </section>
 
 @endsection

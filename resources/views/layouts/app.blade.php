@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-     <!-- CSRF Token -->
+     
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Kumashe</title>
@@ -20,11 +20,7 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-      <!-- Scripts -->
+  
       <script src="js/jquery.js"></script>
       <script src= "{{asset('js/sweetalert.min.js')}}"></script>
       <script src="{{asset('js/jquery.js')}}"></script>
@@ -41,11 +37,11 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
 
-</head><!--/head-->
+</head>
 
 <body>
-    <header id="header"><!--header-->
-        <div class="header_top"><!--header_top-->
+    <header id="header">
+        <div class="header_top">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
@@ -69,9 +65,9 @@
                     </div>
                 </div>
             </div>
-        </div><!--/header_top-->
+        </div>
         
-        <div class="header-middle"><!--header-middle-->
+        <div class="header-middle">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
@@ -106,9 +102,9 @@
                     </div>
                 </div>
             </div>
-        </div><!--/header-middle-->
+        </div>
     
-        <div class="header-bottom"><!--header-bottom-->
+        <div class="header-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-9">
@@ -151,8 +147,8 @@
                     </div>
                 </div>
             </div>
-        </div><!--/header-bottom-->
-    </header><!--/header-->
+        </div>
+    </header>
      @yield('content')
 
     <footer id="footer"><!--Footer-->
@@ -287,7 +283,7 @@
             </div>
         </div>
         
-    </footer><!--/Footer-->
+    </footer>
     
 
   
