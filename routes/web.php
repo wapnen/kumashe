@@ -21,5 +21,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/address', 'UserController@create_address');
 Route::post('/store_address', ['uses' => 'UserController@store_address', 'as' => 'store_address']);
 Route::get('/profile', 'UserController@index');
+Route::get('/new' , 'ProductController@new_product');
 Route::post('/add_to_cart/{id}', 'ProductController@add_to_cart');
 Route::resource('/product', 'ProductController');

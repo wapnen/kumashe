@@ -181,4 +181,8 @@ class ProductController extends Controller
 
          Cart::remove($rowId);
     }
+
+    public function new_product(){
+        return view('product.new');
+    }
 }
