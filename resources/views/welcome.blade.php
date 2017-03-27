@@ -20,8 +20,7 @@
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                                    <img src="images/home/pricing.png"  class="pricing" alt="" />
+                                    <img src="images/home/g1.jpg" class="girl img-responsive" alt="" />
                                 </div>
                             </div>
                             <div class="item">
@@ -32,8 +31,7 @@
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                                    <img src="images/home/pricing.png"  class="pricing" alt="" />
+                                    <img src="images/home/g2.jpg" class="girl img-responsive" alt="" />
                                 </div>
                             </div>
                             
@@ -45,8 +43,7 @@
                                     <button type="button" class="btn btn-default get">Apply now</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                                    <img src="images/home/pricing.png" class="pricing" alt="" />
+                                    <img src="images/home/g3.jpg" class="girl img-responsive" alt="" />
                                 </div>
                             </div>
 

@@ -72,6 +72,7 @@
                     <div class="col-sm-4">
                         <div class="logo pull-left">
                             <a href="{{url('/')}}"><img src="/images/home/logo.png" alt="" /></a>
+                            <h4>Administrator</h4>
                         </div>
                         
                     </div>
@@ -79,22 +80,30 @@
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
                                 
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="{{url('/cart')}}"><i class="fa fa-shopping-cart"></i> Cart <span class="badge"> {{ Cart::count()}}</span></a></a></li>
-                                @if(Auth::user())
                                 
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
-                                        <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                                    </ul>
+                               
+                                @if(Auth::guard('admin_guard')->guest())
+                                <li><a href="{{url('/admin/login')}}">Login</a></li>
+                                <li><a href="{{url('/admin/register')}}"><i class="fa fa-lock"></i> Register</a></li>
+                                @else
+                                <li >
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::guard('admin_guard')->user()->name }} <span class="caret"></span>
+                                </a>
+
+                                
                                 </li>
-                                @endif
-                                @if(Auth::guest())
-                                <li><a href="{{url('/login')}}"><i class="fa fa-lock"></i> Login/Register</a></li>
+                                 <li>
+                                        <a href="{{ url('/admin/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ url('/admin/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
                                 @endif
                             </ul>
                         </div>
@@ -117,25 +126,16 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
+
+                                @if(Auth::guard('admin_guard')->user())
+                                <li><a href="{{url('/admin/home')}}" class="active">Home</a></li>
+                                <li><a href="{{url('/product/create')}}">Add Product</a></li>
+                                <li><a href="{{url('/product/')}}">View products</a></li>    
+                                @else
                                 <li><a href="{{url('/')}}" class="active">Home</a></li>
-                                <li class="dropdown"><a href="#">Product Categories<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Hair</a></li>
-                                        <li><a href="product-details.html">Face</a></li> 
-                                        <li><a href="checkout.html">Body</a></li> 
-                                        <li><a href="cart.html">Nails</a></li> 
-                                        <li><a href="login.html">Perfumes and Body spray</a></li>
-                                        <li><a href="">Feet</a></li> 
-                                    </ul>
-                                </li> 
-                                <li class="dropdown"><a href="#">Make up School<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Overview</a></li>
-                                        <li><a href="blog-single.html">Apply Now</a></li>
-                                    </ul>
-                                </li> 
-                               
-                                <li><a href="contact-us.html">Contact</a></li>
+                                @endif
+
+
                             </ul>
                         </div>
                     </div>
@@ -212,67 +212,6 @@
             </div>
         </div>
         
-        <div class="footer-widget">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>Service</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Make-up School</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Order Status</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>Quick Shop</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Hair </a></li>
-                                <li><a href="#">Body</a></li>
-                                <li><a href="#">Nails</a></li>
-                                <li><a href="#">Feet</a></li>
-                                <li><a href="#">Perfumes</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>Policies</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Refund Policy</a></li>
-                                <li><a href="#">Billing System</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>About Shopper</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Company Information</a></li>
-                                <li><a href="#">Store Location</a></li>
-                                <li><a href="#">Copyright</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 col-sm-offset-1">
-                        <div class="single-widget">
-                            <h2>News Letter</h2>
-                            <form action="#" class="searchform">
-                                <input type="text" placeholder="Your email address" />
-                                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-                                <p>Get the most recent updates from <br />our site and be updated your self...</p>
-                            </form>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
@@ -295,4 +234,4 @@
      <script src="/js/app.js"></script>
 
 </body>
-</html>
+</html>  

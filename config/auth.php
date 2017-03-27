@@ -45,6 +45,11 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'admin_guard' => [
+            'driver' => 'session',
+            'provider' => 'administrators',
+        ],
     ],
 
     /*
@@ -70,10 +75,10 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'administrators' => [
+            'driver' => 'eloquent',
+            'model' => App\Administrator::class,
+        ],
     ],
 
     /*
