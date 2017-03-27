@@ -21,10 +21,10 @@ Route::get('/home', 'HomeController@index');
 Route::get('/address', 'UserController@create_address');
 Route::post('/store_address', ['uses' => 'UserController@store_address', 'as' => 'store_address']);
 Route::get('/profile', 'UserController@index');
-Route::post('/add_to_cart/{id}', 'ProductController@add_to_cart');
-Route::post('/edit_cart/{id}', 'ProductController@edit_cart');
-Route::get('/remove_cart_item/{id}', 'ProductController@remove_cart_item');
-Route::get('/cart', 'ProductController@cart');
+Route::post('/add_to_cart/{id}', 'SaleController@add_to_cart');
+Route::post('/edit_cart/{id}', 'SaleController@edit_cart');
+Route::get('/remove_cart_item/{id}', 'SaleController@remove_cart_item');
+Route::get('/cart', 'SaleController@cart');
 Route::resource('/product', 'ProductController');
 
 Route::group(['middleware' => 'admin_guest'] , function(){
