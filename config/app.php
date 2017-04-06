@@ -180,6 +180,9 @@ return [
         GrahamCampbell\Flysystem\FlysystemServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        //App\Providers\GoogleCloudStorageServiceProvider::class,
+        Superbalist\LaravelGoogleCloudStorage\GoogleCloudStorageServiceProvider::class,
     ],
 
     /*
@@ -233,6 +236,7 @@ return [
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
          'Alert' => UxWeb\SweetAlert\SweetAlert::class,
          'Input' => Illuminate\Support\Facades\Input::class,
+         'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 

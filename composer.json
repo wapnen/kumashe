@@ -7,13 +7,18 @@
     "require": {
         "php": ">=5.6.4",
         "aws/aws-sdk-php-laravel": "^3.1",
+        "barryvdh/laravel-dompdf": "^0.8.0",
         "doctrine/dbal": "^2.5",
         "gloudemans/shoppingcart": "^2.3",
         "graham-campbell/flysystem": "^3.7",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
+        "laravelcollective/html": "^5.4",
         "league/flysystem-aws-s3-v3": "^1.0",
-        "uxweb/sweet-alert": "^1.4"
+        "superbalist/flysystem-google-storage": "^3.0",
+        "superbalist/laravel-google-cloud-storage": "^1.0",
+        "uxweb/sweet-alert": "^1.4",
+        "guzzlehttp/guzzle": "~4.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -79,7 +79,7 @@
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
                                 
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                                <li><a href="{{url('/guest/checkout')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                 <li><a href="{{url('/cart')}}"><i class="fa fa-shopping-cart"></i> Cart <span class="badge"> {{ Cart::count()}}</span></a></a></li>
                                 @if(Auth::user())
                                 

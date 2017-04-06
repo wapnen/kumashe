@@ -41,6 +41,7 @@ class UserController extends Controller
             ]);
 
         $address = new Address($request->all());
+        $address->type = 'user';
         $address->save();
         return redirect(url('/profile'));
 

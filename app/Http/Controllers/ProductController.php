@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Contracts\Filesystem\Filesystem;
 use App\Product;
-use AWS;
+//use AWS;
 use DB;
 use Input;
 use Alert;
 use Cart;
+use App\Providers\GoogleCloudStorageServiceProvider;
 
 class ProductController extends Controller
 {   
@@ -61,18 +62,15 @@ class ProductController extends Controller
         $product = new Product($request->all());
 
 
-        $file = $request->file('image') ;
-        $fileName =  time() . '.' . $file->getClientOriginalExtension() ;
-        $filePath = $file->getPathName();
+        $image = $request->file('image') ;
 
-        $s3 = AWS::createClient('s3');
-        $s3->putObject(array(
-            'Bucket'     => 'kumashe',
-            'Key'        => $fileName,
-            'SourceFile' => $filePath,
-            'ACL'        => 'public-read'
-        ));
-         $image_url = $s3->getObjectUrl('kumashe', $fileName);
+        $imageFileName = time() . '.' . $image->getClientOriginalExtension();
+        $gcs = \Storage::disk('gcs');
+        $filePath = '/inventory/' . $imageFileName;
+        $gcs->put($imageFileName, file_get_contents($image));
+        $gcs->setVisibility($imageFileName, 'public'); 
+        $image_url = $gcs->url($imageFileName);
+       // dd($gcs);
         $product->image_url = $image_url;
         $product->save();
 
@@ -129,7 +127,7 @@ class ProductController extends Controller
     {
         //
         $product = Product::find($id);
-        $product->update();
+        $product->update($request);
         if($request->hasFile('image')){
             //store image in amazon bucket
         $file = $request->file('image') ;
