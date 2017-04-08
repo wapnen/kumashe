@@ -194,22 +194,31 @@
                                             <img src="{{$product->image_url}}" alt="" />
                                             <h2></h2>
                                             <p>{{$product->name}}</p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            <form class="form-vertical" method="post" action="/add_to_cart/{{$product->id}}">
+                                                    
+                                                    {{csrf_field()}}
+                                                  <button type="button" class="add_to_cart btn btn-default cart">
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                    Add to cart
+                                                </button>
+                                                </form>
                                         </div>
                                         <div class="product-overlay">
                                             <div class="overlay-content">
                                                 <h2>N{{$product->price}}</h2>
                                                 <p>{{$product->name}}</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </div>
+                                                <form class="form-vertical" method="post" action="/add_to_cart/{{$product->id}}">
+                                                   
+                                                    {{csrf_field()}}
+                                                  <button type="button" class="add_to_cart btn btn-default cart">
+                                                    <i class="fa fa-shopping-cart"></i>
+                                                    Add to cart
+                                                </button>
+                                                </form>
+                                                        </div>
                                         </div>
                                 </div>
-                                <div class="choose">
-                                    <ul class="nav nav-pills nav-justified">
-                                        <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                        <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                         @endforeach

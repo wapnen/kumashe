@@ -36,15 +36,10 @@ class CartController extends Controller
         
     }
 
-    public function edit_cart($id){
-
-        Cart::update($rowId, $request->quantity);
-        return redirect(url('/cart'));
-    }
 
     public function remove_cart_item($id){
 
-         Cart::remove($rowId);
+         Cart::remove($id);
          return redirect(url('/cart'));
     }
 
@@ -105,7 +100,7 @@ class CartController extends Controller
     public function  record_sale($id){
     	$transaction = Transaction::find($id);
     	$transaction->status = "Success";
-    	$address = Address::where(['user_id' => $transaction->user_id, 'type' => 'guest'])->get();
+    	//$address = Address::where(['user_id' => $transaction->user_id, 'type' => 'guest'])->get();
     	//$address = Address::where('user_id' , $transaction->user_id)->get();
     	// dd($address);
     	
@@ -159,6 +154,23 @@ class CartController extends Controller
     		$transaction->save();
     		print_r($transaction);die;
     	}
+    }
+     public function store_price_user(){
+        if(Request::ajax()){
+            $data = Input::all();
+            foreach ($data as $key => $value) {
+                if($key == 'total'){
+                    $total = $value;
+                }
+                
+            }
+            $transaction = new Transaction();
+            $transaction->total = $total;
+            $transaction->type = 'user';
+            $transaction->user_id = Auth::user()->id;
+            $transaction->save();
+            print_r(json_encode($transaction));die;
+        }
     }
 
     public function invoice($id){

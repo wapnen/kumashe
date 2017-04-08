@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Request;
+use Illuminate\Http\Request;
+use Cart;
 
 class SaleController extends Controller
 {
     //
-	public function store_address(Request $request ){
-
-		
-	}
+	   public function edit_cart(Request $request, $rowId){
+       
+        Cart::update($rowId, $request->quantity);
+        return redirect(url('/cart'));
+    }
  
 }

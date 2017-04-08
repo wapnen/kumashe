@@ -124,10 +124,6 @@
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-								<form action="post" method="/edit_cart/{{$cartcontent->rowId}}" class="form-inline">
-									<input class="cart_quantity_input" type="text" name="quantity" value="{{$cartcontent->qty}}" autocomplete="off" size="2">
-									<button type = "submit" class="btn btn-default " > Change </button>
-								</form>
 									
 								</div>
 							</td>
@@ -135,7 +131,7 @@
 								<p class="cart_total_price">{{$cartcontent->qty * $cartcontent->price}}</p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href="{{url('/remove_cart_item/{$cartcontent->rowId}')}}"><i class="fa fa-times"></i></a>
+								<a class="cart_quantity_delete" href="{{url('/remove_cart_item/$cartcontent->rowId')}}"><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
 						@endif
@@ -147,7 +143,7 @@
 								<table class="table table-condensed total-result">
 									<tr>
 										<td>Cart Sub Total</td>
-										<td>N{{ Cart::total()}}</td>
+										<td>N{{ Cart::subtotal()}}</td>
 									</tr>
 									<tr>
 										<td>Service Charge</td>
@@ -171,7 +167,7 @@
 					<span>
 						<form >
 							  <script src="https://js.paystack.co/v1/inline.js"></script>
-							  <button type="button"  class="btn btn-default" onclick="payWithPaystack()"> Pay </button> 
+							  <button type="button"  class="btn btn-primary" onclick="payWithPaystack()"> Pay </button> 
 							</form>
 			         		
 					</span>

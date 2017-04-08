@@ -11,6 +11,9 @@ use Input;
 use Alert;
 use Cart;
 use App\Providers\GoogleCloudStorageServiceProvider;
+use App\Transaction;
+use App\User;
+use App\Guest;
 
 class ProductController extends Controller
 {   
@@ -163,5 +166,38 @@ class ProductController extends Controller
         return redirect(route('product.index'));
     }
 
+   //show sales 
+    public function transactions(){
+        $transactions = Transaction::all();
+        return view('sale.transactions', compact('transactions'));
+    }
     
+    public function transaction($id){
+        $transaction = Transaction::find($id);
+        if($transaction->type == 'user'){
+            $user = User::find($transaction->user_id);
+            $address = DB::table('addresses')->where(['user_id' => $user->id, 'type' => 'user'])->get();
+
+            foreach ($address as $key =>$value) {
+                $address = $value;
+            }
+        }
+        else{
+            $user = Guest::find($id);
+            $address = DB::table('addresses')->where(['user_id' => $user_id, 'type' => 'guest'])->get();
+
+            foreach ($address as $key =>$value) {
+                $address = $value;
+            }
+        }
+
+        $sales = $transaction->sale()->get();
+        $products_array = [];
+        foreach ($sales as $sale) {
+            $products_array[] = $sale->id;
+        }
+        $products = DB::table('products')->whereIn('id', $products_array)->get();
+        
+        return view('sale.transaction', compact('transaction', 'user', 'address', 'sales', 'products'));
+    }
 }

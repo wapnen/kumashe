@@ -79,21 +79,22 @@
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
                                 
-                                <li><a href="{{url('/guest/checkout')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="{{url('/cart')}}"><i class="fa fa-shopping-cart"></i> Cart <span class="badge"> {{ Cart::count()}}</span></a></a></li>
+                               
+                                <li><a href="{{url('/cart')}}"><i class="fa fa-shopping-cart"></i> Cart </a></a></li>
                                 @if(Auth::user())
-                                
+                                 <li><a href="{{url('/user/checkout')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    <a href="#">
+                                        {{ Auth::user()->name }} <i class="fa fa-angle-down"></i>
                                     </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
+                                    <ul  role="menu" class="sub-menu">
+                                        <li><a href="/profile"><i class="fa fa-user"></i>My Profile</a></li></br>
                                         <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                                     </ul>
                                 </li>
                                 @endif
                                 @if(Auth::guest())
+                                 <li><a href="{{url('/guest/checkout')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                 <li><a href="{{url('/login')}}"><i class="fa fa-lock"></i> Login/Register</a></li>
                                 @endif
                             </ul>

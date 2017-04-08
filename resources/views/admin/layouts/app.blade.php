@@ -131,6 +131,7 @@
                                 <li><a href="{{url('/admin/home')}}" class="active">Home</a></li>
                                 <li><a href="{{url('/product/create')}}">Add Product</a></li>
                                 <li><a href="{{url('/product/')}}">View products</a></li>    
+                                <li><a href="{{url('/transactions')}}">Sales</a></li>
                                 @else
                                 <li><a href="{{url('/')}}" class="active">Home</a></li>
                                 @endif

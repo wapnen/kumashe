@@ -57,8 +57,8 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key'    => env('AWS_ACCESS_KEY_ID', 'AKIAIQ4F7SYH4A2QBTUA'),
-            'secret' => env('AWS_SECRET_KEY', '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'),
+            'key'    => env('AWS_ACCESS_KEY_ID', ''),
+            'secret' => env('AWS_SECRET_KEY', ''),
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
@@ -66,6 +66,7 @@ return [
             'driver' => 'gcs',
             'project_id' => env('GOOGLE_CLOUD_PROJECT_ID', 'efceefoods'),
             'key_file' => env('GOOGLE_CLOUD_KEY_FILE', 'C:/Users/dirnen/Downloads/efceefoods-c4b75d4f10fb.json'), // optional: /path/to/service-account.json
+            'key' => env('GOOGLE_CLOUD_KEY'),
             'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET', 'efceefoods.appspot.com'),
             'path_prefix' => env('GOOGLE_CLOUD_STORAGE_PATH_PREFIX', null), // optional: /default/path/to/apply/in/bucket
             'storage_api_uri' => env('GOOGLE_CLOUD_STORAGE_API_URI', null), // see: Public URLs below

@@ -104,7 +104,11 @@
 							
 						</ul>
 						<a class="btn btn-default update" id = "get_quotes" href="">Get Quotes</a>
-						<a class="btn btn-default check_out" href="">Continue</a>
+						@if(Auth::user())
+							<a class="btn btn-default check_out" href="/user/checkout">Continue</a>
+						@else
+							<a class="btn btn-default check_out" href="/guest/checkout">Continue</a>
+						@endif
 					</div>
 				</div>
 				<div class="col-sm-6">
@@ -115,7 +119,12 @@
 							<li >Delivery Cost <span id="del_cost">N500</span></li>
 							<li>Total <span id = "total_box"></span></li>
 						</ul>
-							<a class="btn btn-default check_out" href="">Check Out</a>
+						@if(Auth::user())
+							<a class="btn btn-default check_out" href="/user/checkout">Check Out</a>
+						@else
+							<a class="btn btn-default check_out" href="/guest/checkout">Check Out</a>
+						@endif
+
 					</div>
 				</div>
 			</div>
