@@ -62,11 +62,11 @@ class ProductController extends Controller
             'image' => 'required|file',
             ]);
 
-        $credentials = getenv('GOOGLE_CLOUD_KEY');
+        $credentials = getenv('GOOGLE_CREDENTIAL_BASE64');
         $fpath = getenv('GOOGLE_CLOUD_KEY_FILE');
         if ($credentials !== false && $fpath !== false) {
-            file_put_contents($fpath,json_encode($credentials));
-            dd(json_encode($credentials));
+            file_put_contents($fpath,base64_decode($credentials));
+            
         }
 
         $product = new Product($request->all());
