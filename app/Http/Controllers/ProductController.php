@@ -66,6 +66,7 @@ class ProductController extends Controller
         $fpath = getenv('GOOGLE_CLOUD_KEY_FILE');
         if ($credentials !== false && $fpath !== false) {
             file_put_contents($fpath,json_encode($credentials));
+            dd(json_encode($credentials));
         }
 
         $product = new Product($request->all());
