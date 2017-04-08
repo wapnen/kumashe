@@ -66,7 +66,7 @@ return [
             'driver' => 'gcs',
             'project_id' => env('GOOGLE_CLOUD_PROJECT_ID', 'efceefoods'),
             'key_file' => env('GOOGLE_CLOUD_KEY_FILE', 'C:/Users/dirnen/Downloads/efceefoods-c4b75d4f10fb.json'), // optional: /path/to/service-account.json
-            'key' => env('GOOGLE_CLOUD_KEY'),
+            'keyFile' => env('GOOGLE_CLOUD_KEY'),
             'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET', 'efceefoods.appspot.com'),
             'path_prefix' => env('GOOGLE_CLOUD_STORAGE_PATH_PREFIX', null), // optional: /default/path/to/apply/in/bucket
             'storage_api_uri' => env('GOOGLE_CLOUD_STORAGE_API_URI', null), // see: Public URLs below
