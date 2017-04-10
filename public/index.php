@@ -18,11 +18,12 @@
 | loading any of our classes later on. It feels great to relax.
 |
 */
+// dump the google service account key 
+require __DIR__.'/../bootstrap/dump_credentials.php';
 
 require __DIR__.'/../bootstrap/autoload.php';
 
-// dump the google service account key 
-require __DIR__.'/../bootstrap/dump_credentials.php';
+
 
 /*
 |--------------------------------------------------------------------------
