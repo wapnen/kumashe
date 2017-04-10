@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "efceefoods",
+  "private_key_id": "c4b75d4f10fb05153692197abf0f65d5b7fbec4c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQD4cOc6GT8lMOJQ\na3u9LKLIIg0CJXTrpBxTpoeaoHjgvxViWyyGUwl3qR6/l922gjNpUvguP9vrruQl\nS2UfnpXxWtKotLc5QupkCjNnu1IJ+7W2O7cBxH2d0/4XHKpUwkQ2P0Jda7yUlF/k\nr++EA/SIlqkJST4gTENiSsDHJY1fH7GmW0MtsbLSAaGtqZotz1q3BjhStHHs2IEj\nsadA/L2tEJ9QV+Ml7Omu3ltphhrm881qrYlYR3g7DwcJmHnbGFII+gaODogzpAb9\nhB/wlFjQNOG5QHDHOTybtl2BsmYhpMjlR0tyfSjypUFURV/JoLAZVKTpsBUyfQ3t\nMO2IlkwPAgMBAAECggEBAM4SGDmAp3fZzF6YSNLpKzyFwfR9zTWHsldQUjpX0Ova\nk4o5xfzE851lkjOpbCXuaWZ7g5AZN/mN339vwjkv+X9wrjtxamj8sB66t1jbb3kI\nZ/j4HxxAN1GqfZ/+DuqvGJVGc22553n2eHPf2vPNtA93qE4jinyPxXTKPIzzAQhc\nR0etIRsjQPeszrGb1II3DzDWx1eMpl2/puwMGwExI2G4q1e6U2NQkpedCHbQnQ68\nOM5ex0tvCKwwldt6trDOAlEkRiBhP0WWsTIZSF5X48PC1zM9sAjgb4kfzHE2OO+s\n1GSfgbOMW94B3EztBTMTxrj6bhbk8lu/Ip2DSXSPI4ECgYEA/EHVd+gCMRelveSm\n9S5zy1lgbvcJPLSWR0Ihmca+iwUNJVHMR61XLkzqPPrcsxds/hbGIzQAu+qHosnz\nP3fAyOZ3ytcYcfTbEIW23DQKGnGRg+M4/R5SytX0A+Ks37oCDD3JbDVe2OHwJVqh\nx2UObXBYYX+81CL+KmS7eeu9kTkCgYEA/CCTA6Hkkjc5PJeRtFcff/UScJEI/XzM\nZSboXeNfq1CqFpGZ1W0JqsRmReW1exprAhA98uv/gs7FZQVI1t9YWY46PYBMU3jj\nmsON2Kqkrm9VqtCLEm2Pae3F3YQIrfklaVk5DFIwD3EgvDYtGSCGr44xdui2I8iy\nn7v4Vq3fb4cCgYA24FeBAz7e0SckPUa41cco+KOK4EDpLNv4WoGWw26WLZ4jfTz0\nZtgtYVwfse8rIrB6QhgOdnSmbKnfFxHMv893pPNwdASEXeD+IiialNOR1xzx1Q+D\nuQIH0C2KXth+vydM5HAaEy4z/krQxXumNezCkAsaAsDgYVBrhohmSItvuQKBgQDU\n/pvUFL9pOpfy9UTVKkjlK19xk0UaCIUP6weg0YYvzwxx1n00DVJ+Xj7cS8u9/Lpr\n2tbK0s5fbljaF9XKGJKlzX6sGCfi2JzHUO8THE3VQx8HF/h1D/N5FLL0iSdf+bu+\nPO7x1rjdQr/Z4JbGxHCj/KcTAlNk9ZbZVM3eRDMfHwKBgQCLzjg2yvChfTC4E+ag\n6m+74KC7u83QQ7K8eRziICkgxi7Bl5SoobmywgHmDt30DGs6qM+L+PXQDx8J7Q6K\nheb4brzhG6bGkfF4oZ6uma8pn4yiYfK/iSK5+G0AhChhoIT/udXioC2LilWClSVJ\nVqqNNP/iWPaIkjIXB3kjrXg3Sw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "kumashe@efceefoods.iam.gserviceaccount.com",
+  "client_id": "102321062758188427319",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kumashe%40efceefoods.iam.gserviceaccount.com"
+}
