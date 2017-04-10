@@ -33,7 +33,6 @@
             "App\\": "app/"
         },
         "files": [
-            "bootstrap/dump_credentials.php"
         ]
     },
     "autoload-dev": {

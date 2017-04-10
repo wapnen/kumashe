@@ -1,12 +1,7 @@
 <?php
-require __DIR__.'/../bootstrap/dump_credentials.php';
-$credentials = getenv('GOOGLE_CREDENTIAL_BASE64');
-        $fpath = getenv('GOOGLE_CLOUD_KEY_FILE');
-        if ($credentials !== false && $fpath !== false) {
-            file_put_contents($fpath,base64_decode($credentials));
-            
-        }
-        
+//require __DIR__.'/../bootstrap/dump_credentials.php';
+
+
 return [
 
     /*
